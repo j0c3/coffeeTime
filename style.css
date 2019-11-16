@@ -34,6 +34,12 @@ button {
     font-size: 16px;
     border-radius: 4px;
 }
+.reset  {
+    display: block;
+    margin-left: 50%;
+    position: center;
+    background: #75c29a;color: #f4fffd;
+}
 .submit {
     position: center;
     margin-left: 10%;
@@ -63,6 +69,7 @@ cups {
     position: center;
 }
 .cups {
+    border-radius: 10px;
     margin-left: 20px;
     display: inline-block;
     width: 40px;
@@ -71,11 +78,20 @@ cups {
     background: url(https://vectorspedia.com/images/2014/09/20140927_5426769f54b4d-336x280.jpg) aliceblue center;
     background-size: cover;
 }
+.cups:hover{
+    background-color: #3e8e41;
+}
+.cups:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
 cup-counter  {
     background: rgba(255,255,255,0.2);
     display: inline-block;
     margin-left: 20px;
 }
-/*bedtime {*/
-/*    margin-left: 10px;*/
-/*}*/
+result {
+    position: center;
+    margin-left: 50%;
+}

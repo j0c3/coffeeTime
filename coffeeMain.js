@@ -6,17 +6,25 @@ let time = 0;
 var today = new Date();
 let difference = 0;
 
-//shows the rest of the page if
+//TODO Finish reset()
+//reset page, take me back
+function reset(){
+
+}
+//shows the rest of the page when yes button is clicked
 function showAll(){
     console.log("start");
     //reveals the rest
     document.getElementById("hide").style.display= "block";
     document.getElementById("nope").style.display= "none";
-    
+
     //hide the age question
     document.getElementsByClassName("over18")[0].style.display= "none";
 }
 
+
+let amount = 0;
+let coffeeResult=0;
 //our main function that will handle
 function log(){
     //store value
@@ -25,12 +33,16 @@ function log(){
     let currentMin = parseInt(today.getMinutes());
     difference = Math.abs(parseInt(time,0)- currentHour);
     if(clicks > 0){
-        let amount = clicks * 90;
-        console.log("hello friend")
-        var coffeeResult = metabolize(difference,amount);
+        // amount = clicks * 90;
+        coffeeResult = metabolize(difference,amount);
+        result(coffeeResult);
     }
-    //dont do this (opens up a new page)
-    document.write("hello test" + coffeeResult);
+}
+function result(coffeeResult){
+    amount = clicks *90;
+    //hide prompt and submit button
+    document.getElementById("hide").style.display="none";
+    document.getElementById("result").style.display="block";
 
 }
 
