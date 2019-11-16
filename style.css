@@ -1,0 +1,81 @@
+html{
+    box-sizing: border-box;
+    font-size: 10px;
+    background: #ffc600;
+}
+
+body{
+    padding: 0px;
+    font-size: large;
+    /*margin: 010px;*/
+    font-family: 'Amatic SC', cursive;
+}
+h1 {
+    text-align: center;
+    font-size: 10rem;
+    line-height: 1;
+    margin-bottom: 0;
+}
+h2 {
+    /*padding-left: 100px;*/
+    /*padding-right: 15px;*/
+    text-align: center;
+    font-size: xx-large;
+    margin-bottom: 50px;
+}
+.log{
+    text-align: center;
+}
+button {
+    border: none;
+    margin-left: 5px;
+    padding: 10px 15px;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+.submit {
+    position: center;
+    margin-left: 10%;
+    background: #e02b27;color: #f4fffd;
+}
+.no{
+    /*position: relative;*/
+    background: #e02b27;color: #f4fffd;
+}
+.yes{
+    /*position: relative;*/
+    margin-left: 15px;
+    background: #1bc245;color: #f4fffd;
+}
+
+log {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+
+cups {
+    /*position: fixed;*/
+    position: center;
+}
+.cups {
+    margin-left: 20px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    background: url(https://vectorspedia.com/images/2014/09/20140927_5426769f54b4d-336x280.jpg) aliceblue center;
+    background-size: cover;
+}
+cup-counter  {
+    background: rgba(255,255,255,0.2);
+    display: inline-block;
+    margin-left: 20px;
+}
+/*bedtime {*/
+/*    margin-left: 10px;*/
+/*}*/

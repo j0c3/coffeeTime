@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee Time!</title>
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><h1>It's Coffee Time!</h1>
+<div class = "over18" style = "display: block;">
+    <h2>Are you over 18?
+        <button class = "yes" onclick="showAll()">yes
+        </button>
+        <button class = "no" onclick='underAge()'>no
+        </button>
+    </h2></div>
+
+
+<p id = "nope"></p>
+
+<div id = "hide" style="display: none;" class = "log">
+    <h4>
+        <ul>When is your bedtime?<br></ul>
+        <ul><input type = "time" id = 'bedtime' value = "23:10">
+        </ul>
+        <!--    <div class = "initial-caf"></div>-->
+        <!--    <div class = "caf-result"></div>-->
+        How many cups of coffee do you want to drink?
+        <div class = "cups" onclick="cupCounter()"><div class ="cup-counter"></div>
+
+        </div>
+    </h4>
+    <button class = "submit" onclick="log()">Submit</button>
+</div>
+</body>
+
+<script src = "coffeeMain.js"></script>
+
+
+</html>
