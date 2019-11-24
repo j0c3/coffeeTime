@@ -53,7 +53,8 @@ var clicks = 0;
 function cupCounter(){
 
     clicks ++;
-    cups.textContent = clicks;
+    document.getElementById('cup-counter').value = clicks;
+    // cups.textContent = clicks;
     return clicks;
 }
 function metabolize(bedtime, amount){
