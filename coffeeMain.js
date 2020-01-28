@@ -6,6 +6,25 @@ let time = 0;
 var today = new Date();
 let difference = 0;
 
+//adding limits based on weight, caffeine tolerance and choice of drink
+function pickCoffee(){
+    document.getElementById("drink-list").classList.toggle("show");
+    //will close window when clicked outside
+    window.onclick  = function (event) {
+        if(!event.target.matches('.list-btn')){
+            var drop = document.getElementsByClassName("drink-content");
+            for(var i = 0; i < drop.length; i++){
+                var openDrop = drop[i];
+                if(openDrop.classList.contains('show')){
+                    openDrop.classList.remove('show');
+                }
+            }
+        }
+
+    }
+}//endCoffeeList
+
+
 //TODO Finish reset()
 //reset page, take me back
 function reset(){

@@ -1,7 +1,9 @@
 html{
     box-sizing: border-box;
     font-size: 10px;
-    background: #ffc600;
+
+    background: #ffc600 no-repeat url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
+    background-size: cover;
 }
 
 body{
@@ -9,6 +11,7 @@ body{
     font-size: large;
     /*margin: 010px;*/
     font-family: 'Amatic SC', cursive;
+
 }
 h1 {
     text-align: center;
@@ -26,13 +29,22 @@ h2 {
 .log{
     text-align: center;
 }
+
 button {
     border: none;
-    margin-left: 5px;
+    /*margin-left: 5px;*/
     padding: 10px 15px;
     display: inline-block;
     font-size: 16px;
     border-radius: 4px;
+}
+.limit{
+    border: none;
+    display: block;
+    /*position: center;*/
+    background: #000000;
+    color: #f4fffd;
+    margin:10% auto;
 }
 .reset  {
     display: block;
