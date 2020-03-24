@@ -7,11 +7,11 @@ var today = new Date();
 let difference = 0;
 
 //adding limits based on weight, caffeine tolerance and choice of drink
-function pickCoffee(){
+function pickDrink(){
     document.getElementById("drink-list").classList.toggle("show");
     //will close window when clicked outside
     window.onclick  = function (event) {
-        if(!event.target.matches('.list-btn')){
+        if(!event.target.matches('.drop-drink-btn')){
             var drop = document.getElementsByClassName("drink-content");
             for(var i = 0; i < drop.length; i++){
                 var openDrop = drop[i];
@@ -25,20 +25,12 @@ function pickCoffee(){
 }//endCoffeeList
 
 
-//TODO Finish reset()
-//reset page, take me back
-function reset(){
 
-}
 //shows the rest of the page when yes button is clicked
-function showAll(){
-    console.log("start");
-    //reveals the rest
-    document.getElementById("hide").style.display= "block";
-    document.getElementById("nope").style.display= "none";
-
-    //hide the age question
-    document.getElementsByClassName("over18")[0].style.display= "none";
+function showAll() {
+    document.getElementById("limit").style.display = "none";
+    document.getElementById("log").style.display= "block";
+    // document.getElementsByClassName("hidden")[0].style.display="none";
 }
 
 

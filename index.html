@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Coffee Time!</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
 </head>
-<body><h1>It's Coffee Time!</h1>
-<div class = "MaxLimit" style = "display: block;">
-    <button class = "limit">I want to know my limit.</button></div>
+<body>
+<div class="coffee-container">
+    <div class="coffee-overlay"></div>
+<h1>It's Coffee Time!</h1>
+    <button onclick="showAll()" id="limit"> I want to know my limit.</button>
+
+
+    <div class="hide" id ="log" >
+        <div class="drink-list">
+            Pick a drink:
+            <select>
+              <option value ="brewed coffee" selected>Brewed Coffee(12 oz)</option>
+              <option value = "espresso" selected>espresso</option>
+              <option value="latte"> medium latte (one shot) </option>
+            </select>
+         </div>
+        Enter your weight:
+        <input text="number" id="weight">lbs </input>
+        <button class = "submit" onclick="log()">Submit</button>
+    </div>
+
 <!--<div class = "over18" style = "display: block;">-->
 <!--    <h2>Are you over 18?-->
 <!--        <button class = "yes" onclick="showAll()">yes-->
@@ -21,25 +39,32 @@
 
 <p id = "nope"></p>
 
-<div id = "hide" style="display: none;" class = "log">
-    <h4>
-        <ul>When is your bedtime?<br></ul>
-        <ul><input type = "time" id = 'bedtime' value = "23:10">
-        </ul>
+<!--<div id = "hide" style="display: none;" class = "log">-->
+<!--    <h4>-->
+<!--        <ul>When is your bedtime?<br></ul>-->
+<!--        <ul><input type = "time" id = 'bedtime' value = "23:10">-->
+<!--        </ul>-->
 
-        <ul>How many cups of coffee do you want to drink?</ul>
-            <ul><div class = "cups" onclick="cupCounter()">
-            </div>
-            <input type="number" id ="cup-counter" value="0"></input>
-        </ul>
-    </h4>
-    <button class = "submit" onclick="log()">Submit</button>
-</div>
+<!--        <ul>How many cups of coffee do you want to drink?</ul>-->
+<!--            <ul><div class = "cups" onclick="cupCounter()">-->
+<!--            </div>-->
+<!--            <input type="number" id ="cup-counter" value="0"></input>-->
+<!--        </ul>-->
+<!--    </h4>-->
+<!--    <button class = "submit" onclick="log()">Submit</button>-->
+<!--</div>-->
 <div id = "result" style = "display: none;" ><h4>Your new bedtime is: </h4>
     <button class = "reset">Reset
     </button>
 </div>
+
+</div>
 </body>
+
+<div id="footer" class="footer">
+    <p>Disclaimer: These calculations apply to those age 18 and over.
+        <br>This is not a substitute for professional medical advice.</p>
+</div>
 
 <script src = "coffeeMain.js"></script>
 

@@ -1,17 +1,19 @@
-html{
-    box-sizing: border-box;
-    font-size: 10px;
-
-    background: #ffc600 no-repeat url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
-    background-size: cover;
-}
-
 body{
     padding: 0px;
     font-size: large;
-    /*margin: 010px;*/
+    margin-bottom: 20%;
     font-family: 'Amatic SC', cursive;
+    box-sizing: border-box;
+    font-size: 10px;
+    background-image: url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
+    background-size: cover;
 
+}
+.coffee-overlay {
+    /*background-color: rgba(0,0,0,0.5);*/
+    /*position: fixed;*/
+    /*height: 100%;*/
+    /*width: 100%;*/
 }
 h1 {
     text-align: center;
@@ -26,25 +28,56 @@ h2 {
     font-size: xx-large;
     margin-bottom: 50px;
 }
-.log{
+#log{
+    /*style for the block that asks for weight and drink*/
+    margin-top: 10%;
+    margin-left:20%;
+    margin-right: 20%;
     text-align: center;
+    color: white;
+    display: none;
+}
+
+.hide{
+    /*visibility: hidden;*/
+}
+#weight{
+    background: #1d2c38;
+    color: white;
+    border: 1px solid #15282b;
+    width: 50px;
+    margin-right: 10px;
+
 }
 
 button {
     border: none;
     /*margin-left: 5px;*/
     padding: 10px 15px;
-    display: inline-block;
+    display: block;
     font-size: 16px;
     border-radius: 4px;
-}
-.limit{
-    border: none;
-    display: block;
-    /*position: center;*/
     background: #000000;
     color: #f4fffd;
     margin:10% auto;
+}
+option {
+    background: lightseagreen;
+}
+
+.drink-list{
+
+}
+.drink-list select {
+    background: #1d2c38;
+    color: white;
+    font-family: "Amatic SC";
+    font-size: 16px;
+}
+
+
+.drop-drink-btn:hover, .dropbtn:focus {
+    background-color: #1d2c38;
 }
 .reset  {
     display: block;
@@ -53,8 +86,8 @@ button {
     background: #75c29a;color: #f4fffd;
 }
 .submit {
-    position: center;
-    margin-left: 10%;
+    /*position: center;*/
+
     background: #e02b27;color: #f4fffd;
 }
 .no{
@@ -70,47 +103,22 @@ button {
     position: center;
 }
 
-log {
-    width: 600px;
-    height: 400px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
 
-.cups {
-    border-radius: 10px;
-    margin-left: 20px;
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-
-    background: url(https://vectorspedia.com/images/2014/09/20140927_5426769f54b4d-336x280.jpg) aliceblue center;
-    background-size: cover;
-}
-.cups:hover{
-    background-color: #3e8e41;
-}
-.cups:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-#cup-counter  {
-    text-align: center;
-    /*padding-left: 20px;*/
-    margin-left: 5px;
-    margin-bottom: 4px;
-    padding-top: 20px;
-    display: inline-block;
-    border: none;
-    background: #dfae4b;
-    width:30px;
-    /*height: 40px;*/
-}
 
 result {
     position: center;
     margin-left: 50%;
+}
+
+.footer{
+    position: fixed;
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+
 }
 
