@@ -42,7 +42,7 @@ h1 {
     box-sizing: border-box;
     color: white;
     margin-right: 10px;
-    width: 50px;
+    width: 10vh;
 
 }
 
@@ -107,13 +107,13 @@ option {
 }
 
 .footer{
-    position: absolute;
+    /*position: absolute;*/
     background-color: black;
     bottom: 0;
     color: white;
     font-size: 22px;
     left: 0;
-    /*margin-top: 40px;*/
+    margin-top: 40px;
     /*margin-bottom: 10%;*/
     text-align: center;
     width: 100%;
@@ -132,7 +132,8 @@ and (orientation: portrait) {
 
     }
     .coffee-container{
-        margin-bottom: 45%;
+        /*margin-bottom: 45%;*/
+        margin-bottom: 35%;/* works for pixel*/
     }
     #calculateC{
         height: fit-content;
@@ -156,6 +157,7 @@ and (orientation: portrait) {
         color:white;
     }
     #footer{
+        position: absolute;
         font-size: 200%;
     }
 
