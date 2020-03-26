@@ -10,53 +10,31 @@
 <div class="coffee-container">
     <div class="coffee-overlay"></div>
 <h1>It's Coffee Time!</h1>
-    <button onclick="showAll()" id="limit"> I want to know my limit.</button>
+<!--    <button onclick="showAll()" id="limit"> I want to know my limit.</button>-->
 
 
     <div class="hide" id ="log" >
         <div class="drink-list">
             Pick a drink:
-            <select>
-              <option value ="brewed coffee" selected>Brewed Coffee(12 oz)</option>
-              <option value = "espresso" selected>espresso</option>
-              <option value="latte"> medium latte (one shot) </option>
+            <select id="choices">
+              <option value ="112" >Brewed Coffee(12 oz)</option>
+              <option value = "77" >espresso</option>
+              <option value="140"> medium latte </option>
             </select>
          </div>
         Enter your weight:
-        <input text="number" id="weight">lbs </input>
-        <button class = "submit" onclick="log()">Submit</button>
+        <input type="number" id="weight" maxlength="3" size="3" value="100">lbs </input>
+        <button id = "submit" onclick="log()">Submit</button>
+    </div>
+    <div id="result" style=" display: inline-block">Output:
+        Based on your current weight, your maximum safe dose would be
+    <strong><div class="highlight" id="resultP" style="display: inline;" size="3"></div></strong>mg.
+        <br>You can drink up to <div class="highlight" id ="displayAmounts" size="1" style="display: inline;"></div>
+        cups/shots of <div class="highlight" id ="displayDrink" style="display: inline;"></div>.
+
     </div>
 
-<!--<div class = "over18" style = "display: block;">-->
-<!--    <h2>Are you over 18?-->
-<!--        <button class = "yes" onclick="showAll()">yes-->
-<!--        </button>-->
-<!--        <button class = "no" onclick='underAge()'>no-->
-<!--        </button>-->
-<!--    </h2></div>-->
-<!--    </h2></div>-->
 
-
-<p id = "nope"></p>
-
-<!--<div id = "hide" style="display: none;" class = "log">-->
-<!--    <h4>-->
-<!--        <ul>When is your bedtime?<br></ul>-->
-<!--        <ul><input type = "time" id = 'bedtime' value = "23:10">-->
-<!--        </ul>-->
-
-<!--        <ul>How many cups of coffee do you want to drink?</ul>-->
-<!--            <ul><div class = "cups" onclick="cupCounter()">-->
-<!--            </div>-->
-<!--            <input type="number" id ="cup-counter" value="0"></input>-->
-<!--        </ul>-->
-<!--    </h4>-->
-<!--    <button class = "submit" onclick="log()">Submit</button>-->
-<!--</div>-->
-<div id = "result" style = "display: none;" ><h4>Your new bedtime is: </h4>
-    <button class = "reset">Reset
-    </button>
-</div>
 
 </div>
 </body>

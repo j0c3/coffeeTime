@@ -29,31 +29,30 @@ function pickDrink(){
 //shows the rest of the page when yes button is clicked
 function showAll() {
     document.getElementById("limit").style.display = "none";
-    document.getElementById("log").style.display= "block";
+    document.getElementById("log").style.display= "inline-block";
     // document.getElementsByClassName("hidden")[0].style.display="none";
 }
 
+const display = document.getElementById('resultP');
+const displayDrink = document.getElementById('displayDrink');
+const displayAmounts = document.getElementById('displayAmounts');
 
-let amount = 0;
-let coffeeResult=0;
 //our main function that will handle
 function log(){
     //store value
-    time = document.getElementById('bedtime').value;
-    let currentHour = parseInt(today.getHours());
-    let currentMin = parseInt(today.getMinutes());
-    difference = Math.abs(parseInt(time,0)- currentHour);
-    if(clicks > 0){
-        // amount = clicks * 90;
-        coffeeResult = metabolize(difference,amount);
-        result(coffeeResult);
-    }
-}
-function result(coffeeResult){
-    amount = clicks *90;
-    //hide prompt and submit button
-    document.getElementById("hide").style.display="none";
-    document.getElementById("result").style.display="block";
+    var getMg = document.getElementById("choices");
+    var index = getMg.options[getMg.selectedIndex];
+    var indexValue = getMg.options[getMg.selectedIndex].value;
+
+    let weight=document.getElementById("weight").value;
+    let kgvalue = weight*2.2;
+
+    var outputCLimit = Math.round(weight*2.72);
+    var outputMaxCups = outputCLimit/indexValue;
+
+    display.innerText=outputCLimit.toString();
+    displayDrink.innerText=index.innerText;
+    displayAmounts.innerText = (outputMaxCups.toFixed(2)).toString();
 
 }
 

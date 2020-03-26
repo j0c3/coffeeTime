@@ -1,11 +1,12 @@
 body{
     padding: 0px;
     font-size: large;
-    margin-bottom: 20%;
+    margin-bottom: 80px;
     font-family: 'Amatic SC', cursive;
     box-sizing: border-box;
     font-size: 10px;
-    background-image: url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(75, 37, 0, 0.89)),
+    url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
     background-size: cover;
 
 }
@@ -32,19 +33,22 @@ h2 {
     /*style for the block that asks for weight and drink*/
     margin-top: 10%;
     margin-left:20%;
-    margin-right: 20%;
+    margin-right: 10%;
     text-align: center;
     color: white;
-    display: none;
+    font-size: large;
+    display: inline-block;
+    /*display: none;*/
+
 }
 
 .hide{
     /*visibility: hidden;*/
 }
 #weight{
-    background: #1d2c38;
+    background: #38240f;
     color: white;
-    border: 1px solid #15282b;
+    border: 1px solid #38240f;
     width: 50px;
     margin-right: 10px;
 
@@ -65,49 +69,42 @@ option {
     background: lightseagreen;
 }
 
-.drink-list{
 
-}
 .drink-list select {
-    background: #1d2c38;
+    background: #38240f;
     color: white;
     font-family: "Amatic SC";
     font-size: 16px;
 }
 
 
-.drop-drink-btn:hover, .dropbtn:focus {
-    background-color: #1d2c38;
-}
-.reset  {
-    display: block;
-    margin-left: 50%;
-    position: center;
-    background: #75c29a;color: #f4fffd;
-}
-.submit {
+
+#submit {
     /*position: center;*/
-
-    background: #e02b27;color: #f4fffd;
-}
-.no{
-    /*position: relative;*/
-    background: #e02b27;color: #f4fffd;
-}
-.yes{
-    /*position: relative;*/
-    margin-left: 15px;
-    background: #1bc245;color: #f4fffd;
-}
-#nope{
-    position: center;
+    background: #12807d;
+    color: #f4fffd;
 }
 
 
 
-result {
-    position: center;
-    margin-left: 50%;
+#result {
+    /*margin-left: 50%;*/
+    /*padding: 100px;*/
+    /*margin-top: 10%;*/
+    /*margin-right: 10%;*/
+    padding-right:150px;
+    padding-bottom: 150px;
+    /*background: rgb(29, 44, 56);*/
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+#resultP{
+    margin:1px;
+    /*padding: 1px;*/
+}
+.highlight{
+    background-color: #38240f;
 }
 
 .footer{
