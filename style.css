@@ -8,6 +8,7 @@ url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Amatic SC', cursive;
+    min-height: 100vh;
     height: 100%;
     margin: 0;
 }
@@ -106,18 +107,70 @@ option {
 }
 
 .footer{
-    /*position: absolute;*/
+    position: absolute;
     background-color: black;
     bottom: 0;
     color: white;
-    font-size: large;
+    font-size: 22px;
     left: 0;
-    margin-top: 40px;
+    /*margin-top: 40px;*/
+    /*margin-bottom: 10%;*/
     text-align: center;
     width: 100%;
 }
-/*@viewport {*/
-/*    width: device-width ;*/
-/*    zoom: 1.0 ;*/
-/*}*/
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 480px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+    body{
+        background-size: auto 100%;
+        background-position: left top;
+        background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.24), black),
+        url("https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/organic-coffee-beans-bjorn-holland.jpg");
+
+    }
+    .coffee-container{
+        margin-bottom: 45%;
+    }
+    #calculateC{
+        height: fit-content;
+        margin-top: 20%;
+        margin-bottom: 40%;
+        font-size: 75px;
+    }
+    #choices{
+        font-size: 70px;
+    }
+    #result{
+        font-size: 75px;
+    }
+    #submit{
+        font-size: 65px;
+    }
+    #weight{
+        font-size:70px;
+    }
+    h1{
+        color:white;
+    }
+    #footer{
+        font-size: 200%;
+    }
+
+}
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (orientation: portrait)
+and (-webkit-min-device-pixel-ratio: 1) {
+    body{
+        background-size: auto 100%;
+        background-position: left top;
+        background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.24), black),
+        url("https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/organic-coffee-beans-bjorn-holland.jpg");
+
+    }
+}
 
