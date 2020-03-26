@@ -1,21 +1,18 @@
-body{
+
+body {
     padding: 0px;
     font-size: large;
-    margin-bottom: 80px;
+    margin-bottom: 17%;
     font-family: 'Amatic SC', cursive;
     box-sizing: border-box;
     font-size: 10px;
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(75, 37, 0, 0.89)),
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52),
+    rgba(31, 18, 9, 0.93)),
     url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+}
 
-}
-.coffee-overlay {
-    /*background-color: rgba(0,0,0,0.5);*/
-    /*position: fixed;*/
-    /*height: 100%;*/
-    /*width: 100%;*/
-}
 h1 {
     text-align: center;
     font-size: 10rem;
@@ -31,13 +28,14 @@ h2 {
 }
 #log{
     /*style for the block that asks for weight and drink*/
-    margin-top: 10%;
-    margin-left:20%;
-    margin-right: 10%;
+    /*margin-top: 10%;*/
+    /*margin-left:20%;*/
+    /*margin-right: 10%;*/
     text-align: center;
     color: white;
     font-size: large;
     display: inline-block;
+    width: 100%;
     /*display: none;*/
 
 }
@@ -56,14 +54,14 @@ h2 {
 
 button {
     border: none;
-    /*margin-left: 5px;*/
+    margin-left: 47%;
     padding: 10px 15px;
     display: block;
     font-size: 16px;
     border-radius: 4px;
     background: #000000;
     color: #f4fffd;
-    margin:10% auto;
+    margin-top: 2%;
 }
 option {
     background: lightseagreen;
@@ -88,7 +86,7 @@ option {
 
 
 #result {
-    /*margin-left: 50%;*/
+    margin-left: 50%;
     /*padding: 100px;*/
     /*margin-top: 10%;*/
     /*margin-right: 10%;*/
@@ -116,6 +114,10 @@ option {
     background-color: black;
     color: white;
     text-align: center;
-
+    font-size: large;
 }
+/*@viewport {*/
+/*    width: device-width ;*/
+/*    zoom: 1.0 ;*/
+/*}*/
 
