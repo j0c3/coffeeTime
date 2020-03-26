@@ -8,43 +8,42 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="coffee-container">
-    <h1>It's Coffee Time!</h1>
-<!--    <button onclick="showAll()" id="limit"> I want to know my limit.</button>-->
+    <div class="coffee-container">
+        <h1>It's Coffee Time!</h1>
+    <!--    <button onclick="showAll()" id="limit"> I want to know my limit.</button>-->
 
 
-    <div class="hide" id="calculateC" style="visibility: visible;">
-        <div class="drink-list">
-            Pick a drink:
-            <select id="choices">
-              <option value="112" >Brewed Coffee(12 oz)</option>
-              <option value="77" >Espresso</option>
-              <option value="140">Medium latte </option>
-              <option value="135">Rockstar Energy Drink </option>
-            </select>
-         </div>
-        Enter your weight:
-        <input type="number" id="weight" maxlength="3" size="3" value="100">lbs </input>
-        <button id="submit" onclick="calculateC()">Submit</button>
+        <div class="hide" id="calculateC" style="visibility: visible;">
+            <div class="drink-list">
+                Pick a drink:
+                <select id="choices">
+                  <option value="112" >Brewed Coffee(12 oz)</option>
+                  <option value="77" >Espresso</option>
+                  <option value="140">Medium latte </option>
+                  <option value="135">Rockstar Energy Drink </option>
+                </select>
+             </div>
+            Enter your weight:
+            <input type="number" id="weight" maxlength="3" size="3" value="100">lbs </input>
+            <button id="submit" onclick="calculateC()">Submit</button>
+        </div>
+        <div id="result" style=" display: block">
+            Based on your current weight, your maximum safe dose would be
+            <strong>
+                <div class="highlight" id="resultP" style="display: inline;" size="3"></div>
+            </strong>mg.<br>You can drink up to
+            <div class="highlight" id ="displayAmounts" size="1" style="display: inline;"></div>
+            cups/shots of
+            <div class="highlight" id ="displayDrink" style="display: inline;"></div>.
+
+        </div>
+
     </div>
-    <div id="result" style=" display: block">
-        Based on your current weight, your maximum safe dose would be
-        <strong>
-            <div class="highlight" id="resultP" style="display: inline;" size="3"></div>
-        </strong>mg.<br>You can drink up to
-        <div class="highlight" id ="displayAmounts" size="1" style="display: inline;"></div>
-        cups/shots of
-        <div class="highlight" id ="displayDrink" style="display: inline;"></div>.
-
-    </div>
-
-</div>
     <div id="footer" class="footer">
         Disclaimer: These calculations apply to those age 18 and over.
         <br>This is not a substitute for professional medical advice.
     </div>
 </body>
-
 
 
 <script src = "coffeeMain.js"></script>
