@@ -19,23 +19,16 @@ h1 {
     line-height: 1;
     margin-bottom: 0;
 }
-h2 {
-    /*padding-left: 100px;*/
-    /*padding-right: 15px;*/
-    text-align: center;
-    font-size: xx-large;
-    margin-bottom: 50px;
-}
 #log{
     /*style for the block that asks for weight and drink*/
-    /*margin-top: 10%;*/
+    margin-top: 5%;
     /*margin-left:20%;*/
     /*margin-right: 10%;*/
     text-align: center;
     color: white;
     font-size: large;
     display: inline-block;
-    width: 100%;
+    width: 50%;
     /*display: none;*/
 
 }
@@ -86,16 +79,16 @@ option {
 
 
 #result {
-    margin-left: 50%;
     /*padding: 100px;*/
     /*margin-top: 10%;*/
     /*margin-right: 10%;*/
-    padding-right:150px;
-    padding-bottom: 150px;
+    /*padding-right:150px;*/
+    /*padding-bottom: 150px;*/
     /*background: rgb(29, 44, 56);*/
     color: white;
     font-size: 20px;
     text-align: left;
+    width: 49%;
 }
 #resultP{
     margin:1px;
