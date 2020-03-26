@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-<!--    <meta name=”viewport” content=”width=device-width, initial-scale=1″>-->
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
     <meta charset="UTF-8">
     <title>Coffee Time!</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
@@ -9,39 +9,43 @@
 </head>
 <body>
 <div class="coffee-container">
-<h1>It's Coffee Time!</h1>
+    <h1>It's Coffee Time!</h1>
 <!--    <button onclick="showAll()" id="limit"> I want to know my limit.</button>-->
 
 
-    <div class="hide" id ="log" >
+    <div class="hide" id="calculateC" style="visibility: visible;">
         <div class="drink-list">
             Pick a drink:
             <select id="choices">
-              <option value ="112" >Brewed Coffee(12 oz)</option>
-              <option value = "77" >espresso</option>
-              <option value="140"> medium latte </option>
+              <option value="112" >Brewed Coffee(12 oz)</option>
+              <option value="77" >Espresso</option>
+              <option value="140">Medium latte </option>
+              <option value="135">Rockstar Energy Drink </option>
             </select>
          </div>
         Enter your weight:
         <input type="number" id="weight" maxlength="3" size="3" value="100">lbs </input>
-        <button id = "submit" onclick="log()">Submit</button>
+        <button id="submit" onclick="calculateC()">Submit</button>
     </div>
-    <div id="result" style=" display: block">Output:
+    <div id="result" style=" display: block">
         Based on your current weight, your maximum safe dose would be
-    <strong><div class="highlight" id="resultP" style="display: inline;" size="3"></div></strong>mg.
-        <br>You can drink up to <div class="highlight" id ="displayAmounts" size="1" style="display: inline;"></div>
-        cups/shots of <div class="highlight" id ="displayDrink" style="display: inline;"></div>.
+        <strong>
+            <div class="highlight" id="resultP" style="display: inline;" size="3"></div>
+        </strong>mg.<br>You can drink up to
+        <div class="highlight" id ="displayAmounts" size="1" style="display: inline;"></div>
+        cups/shots of
+        <div class="highlight" id ="displayDrink" style="display: inline;"></div>.
 
     </div>
 
+</div>
+    <div id="footer" class="footer">
+        Disclaimer: These calculations apply to those age 18 and over.
+        <br>This is not a substitute for professional medical advice.
     </div>
-
 </body>
 
-<div id="footer" class="footer">
-    <p>Disclaimer: These calculations apply to those age 18 and over.
-        <br>This is not a substitute for professional medical advice.</p>
-</div>
+
 
 <script src = "coffeeMain.js"></script>
 

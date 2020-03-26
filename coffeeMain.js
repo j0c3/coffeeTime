@@ -3,9 +3,8 @@ const cups = document.querySelectorAll('.cup-counter');
 
 //shows the rest of the page when yes button is clicked
 function showAll() {
-    document.getElementById("limit").style.display = "none";
-    document.getElementById("log").style.display= "inline-block";
-    // document.getElementsByClassName("hidden")[0].style.display="none";
+    document.getElementById("limit").style.visibility = "collapse";
+    document.getElementById("calculateC").style.visibility= "visible";
 }
 
 const display = document.getElementById('resultP');
@@ -13,7 +12,7 @@ const displayDrink = document.getElementById('displayDrink');
 const displayAmounts = document.getElementById('displayAmounts');
 
 //our main function that will handle
-function log(){
+function calculateC(){
     //store value
     var getMg = document.getElementById("choices");
     var index = getMg.options[getMg.selectedIndex];

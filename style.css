@@ -1,14 +1,15 @@
 html{
-
+    box-sizing: border-box;
 }
 body {
-    margin-bottom: 107%;
-    font-family: 'Amatic SC', cursive;
     background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52),
-    rgba(31, 18, 9, 0.93)),
-    url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
+rgba(31, 18, 9, 0.93)),
+url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Amatic SC', cursive;
+    height: 100%;
+    margin: 0;
 }
 
 h1 {
@@ -17,17 +18,17 @@ h1 {
     line-height: 1;
     margin-bottom: 0;
 }
-#log{
+#calculateC{
     /*style for the block that asks for weight and drink*/
-    margin-top: 15%;
-    /*margin-left:20%;*/
-    /*margin-right: 10%;*/
-    text-align: center;
+    box-sizing: border-box;
     color: white;
-    font-size: 20px ;
     display: block;
+    font-size: 28px;
     height: 50%;
-    /*display: none;*/
+    margin-top: 5%;
+    text-align: center;
+    visibility: hidden;
+    /*display: block;*/
 
 }
 
@@ -36,23 +37,24 @@ h1 {
 }
 #weight{
     background: #38240f;
-    color: white;
     border: 1px solid #38240f;
-    width: 50px;
+    box-sizing: border-box;
+    color: white;
     margin-right: 10px;
+    width: 50px;
 
 }
 
 button {
+    background: #000000;
     border: none;
-    margin-left: 47%;
-    padding: 10px 15px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #f4fffd;
     display: block;
     font-size: 16px;
-    border-radius: 4px;
-    background: #000000;
-    color: #f4fffd;
-    margin-top: 2%;
+    margin-left: 47%;
+    padding: 10px 15px;
 }
 option {
     background: chocolate;
@@ -61,32 +63,39 @@ option {
 
 .drink-list select {
     background: #38240f;
+    box-sizing: border-box;
     color: white;
     font-family: "Amatic SC";
     font-size: 16px;
 }
 
+#limit{
+    margin-left: 42%;
+    margin-top: 5%;
+    visibility: visible;
+}
 
 
 #submit {
     /*position: center;*/
     background: #12807d;
     color: #f4fffd;
+    margin-top: 1%;
 }
+
 
 
 
 #result {
     /*padding: 100px;*/
-    margin-top: 6%;
-    /*margin-right: 10%;*/
-    /*padding-right:150px;*/
-    /*padding-bottom: 150px;*/
-    /*background: rgb(29, 44, 56);*/
+    box-sizing: border-box;
     color: white;
-    font-size: 20px;
-    text-align: center;
+
+    font-size: 28px;
     height: 49%;
+    margin-top: 6%;
+    text-align: center;
+    visibility: hidden;
 }
 #resultP{
     margin:1px;
@@ -97,15 +106,15 @@ option {
 }
 
 .footer{
-    position: fixed;
-
-    left: 0;
-    bottom: 0;
-    width: 100%;
+    /*position: absolute;*/
     background-color: black;
+    bottom: 0;
     color: white;
-    text-align: center;
     font-size: large;
+    left: 0;
+    margin-top: 40px;
+    text-align: center;
+    width: 100%;
 }
 /*@viewport {*/
 /*    width: device-width ;*/
