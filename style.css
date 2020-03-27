@@ -133,7 +133,7 @@ and (orientation: portrait) {
     }
     .coffee-container{
         /*margin-bottom: 45%;*/
-        margin-bottom: 35%;/* works for pixel*/
+        margin-bottom: 20%;/* works for pixel*/
     }
     #calculateC{
         height: fit-content;
@@ -173,6 +173,12 @@ and (-webkit-min-device-pixel-ratio: 1) {
         background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.24), black),
         url("https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/organic-coffee-beans-bjorn-holland.jpg");
 
+    }
+    h1{
+        color:white;
+    }
+    .footer{
+        position: absolute;
     }
 }
 
