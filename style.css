@@ -132,7 +132,7 @@ and (orientation: portrait) {
     }
     .coffee-container{
         /*margin-bottom: 45%;*/
-        margin-bottom: 20%;/* works for pixel*/
+        margin-bottom: 10%;/* works for pixel*/
     }
     #calculateC{
         height: fit-content;
@@ -154,7 +154,8 @@ and (orientation: portrait) {
     }
 
     #footer{
-        position: absolute;
+        margin-top: 10%;
+        position: relative;
         font-size: 200%;
     }
 
