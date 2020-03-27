@@ -14,6 +14,7 @@ body {
 }
 
 h1 {
+    color:white;
     text-align: center;
     font-size: 10rem;
     /*line-height: 1;*/
@@ -151,9 +152,7 @@ and (orientation: portrait) {
     #weight{
         font-size:70px;
     }
-    h1{
-        color:white;
-    }
+
     #footer{
         position: absolute;
         font-size: 200%;
@@ -172,9 +171,7 @@ and (-webkit-min-device-pixel-ratio: 1) {
         url("https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/organic-coffee-beans-bjorn-holland.jpg");
 
     }
-    h1{
-        color:white;
-    }
+
     .footer{
         position: absolute;
     }
