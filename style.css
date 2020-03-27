@@ -2,9 +2,9 @@ html{
     box-sizing: border-box;
 }
 body {
-    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52),
-rgba(31, 18, 9, 0.93)),
-url("https://ak6.picdn.net/shutterstock/videos/12110576/thumb/1.jpg");
+    background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.24), black),
+    url("https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/organic-coffee-beans-bjorn-holland.jpg");
+
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Amatic SC', cursive;
@@ -127,8 +127,6 @@ and (orientation: portrait) {
     body{
         background-size: auto 100%;
         background-position: left top;
-        background-image: linear-gradient(to bottom, rgba(36, 36, 36, 0.24), black),
-        url("https://render.fineartamerica.com/images/rendered/default/poster/8/10/break/images-medium/organic-coffee-beans-bjorn-holland.jpg");
 
     }
     .coffee-container{
