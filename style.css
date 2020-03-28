@@ -110,7 +110,7 @@ option {
 .footer{
     /*position: absolute;*/
     background-color: black;
-    bottom: 0;
+    /*bottom: 0;*/
     color: white;
     font-size: 22px;
     left: 0;
