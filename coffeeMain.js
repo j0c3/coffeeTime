@@ -16,17 +16,12 @@ function calculateBedTime() {
 
 
     //output new bedtime and fill chart
-    fillChart(currentTime.getHours(),currentTime.getMinutes(),indexValue,bedTime);
+    fillChart(currentTime,indexValue,bedTime);
     currentTime.setHours(currentTime.getHours() + bedTime);
 
-    if (currentTime.getHours() > 11) {
-        document.getElementById("ampm").innerText = "pm";
-        currentTime.setHours(currentTime.getHours()-12);
-    } else {
-        if(currentTime.getHours()===0) currentTime.setHours(12);
-        document.getElementById("ampm").innerText = "am";
-    }
-    document.getElementById("bedtime").innerText = currentTime.getHours().toString() + ":" + String(currentTime.getMinutes()).padStart(2,"0");
+
+    document.getElementById("bedtime").innerText = currentTime.toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
+    // document.getElementById("bedtime").innerText = currentTime.getHours().toString() + ":" + String(currentTime.getMinutes()).padStart(2,"0");
 }
 
 //shows the rest of the page when yes button is clicked
@@ -60,23 +55,17 @@ function finalAmount(prevDose,eTime){
     return prevDose/Math.pow(2,eTime/6);
 }
 var tTable = [], dTable=[];
-function fillChart(hours, minutes, intake, bedtime) {
+function fillChart(hours, dose, bedtime) {
     //fill out chart
-    let isPM= false;
-    if(hours >12){
-        isPM=true;
-        hours=hours-12;
-    }
-    let dose = intake;
-
     let i = 0;
     for(;i<bedtime+4;i++) {
 
-        tTable.push(hours);
+        tTable.push(hours.toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3"));
         dTable.push(finalAmount(dose,i));
-        hours++;
+        hours.setHours(hours.getHours() + 1);
     }
     // alert(tTable.toString());
+
     drawChart(tTable);
 }
 // load frozen version 44
@@ -85,14 +74,11 @@ google.charts.load('44', {
     packages: ['corechart']
 });
 
-// function drawChart(tTable)
-// {
-//
-// }
+
 function drawChart(tTable){
     // create DataTable
     var data = new google.visualization.DataTable();
-    data.addColumn('number', 'Time');
+    data.addColumn('string', 'Time');
     // data.addColumn('number', 'Id');
     data.addColumn('number', 'mg');
 
@@ -104,6 +90,7 @@ function drawChart(tTable){
     }
 
     var options = {
+
         hAxis: {
             title:'Time'
         },
@@ -111,6 +98,7 @@ function drawChart(tTable){
             title: "Caffeine left in body",
             // scaleType: tTable
         },
+        pointsVisible: true
     };
 
     var chart = new  google.visualization.LineChart(document.getElementById('chart_div'));
