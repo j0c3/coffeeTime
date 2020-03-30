@@ -16,7 +16,8 @@ function calculateBedTime() {
 
 
     //output new bedtime and fill chart
-    fillChart(currentTime,indexValue,bedTime);
+    var copy = currentTime;
+    fillChart(copy,indexValue,bedTime);
     currentTime.setHours(currentTime.getHours() + bedTime);
 
 
@@ -103,6 +104,8 @@ function drawChart(tTable){
 
     var chart = new  google.visualization.LineChart(document.getElementById('chart_div'));
     chart.draw(data, options);
+    tTable=[];
+    dTable=[];
 }
 
 
