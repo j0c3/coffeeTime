@@ -64,16 +64,15 @@ function fillChart(hours, dose, bedtime) {
         dTable.push(finalAmount(dose,i));
         hours.setHours(hours.getHours() + 1);
     }
-    console.log(tTable[bedtime].toString());
     document.getElementById("bedtime").innerText = tTable[bedtime].toString();
 
 
 
-    // drawChart();
+    drawChart();
 }
 // load frozen version 44
 google.charts.load('44', {
-    callback: drawChart(),
+    callback: drawChart,
     packages: ['corechart']
 });
 
@@ -107,7 +106,7 @@ function drawChart(){
 
     var chart = new  google.visualization.LineChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-    // tTable=[];
+    tTable=[];
     dTable=[];
 }
 
