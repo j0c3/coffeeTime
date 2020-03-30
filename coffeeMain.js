@@ -21,7 +21,6 @@ function calculateBedTime() {
     currentTime.setHours(currentTime.getHours() + bedTime);
 
 
-    document.getElementById("bedtime").innerText = currentTime.toLocaleTimeString().replace(/([\d]+:[\d]{2})(:[\d]{2})(.*)/, "$1$3");
     // document.getElementById("bedtime").innerText = currentTime.getHours().toString() + ":" + String(currentTime.getMinutes()).padStart(2,"0");
 }
 
@@ -65,18 +64,21 @@ function fillChart(hours, dose, bedtime) {
         dTable.push(finalAmount(dose,i));
         hours.setHours(hours.getHours() + 1);
     }
-    // alert(tTable.toString());
+    console.log(tTable[bedtime].toString());
+    document.getElementById("bedtime").innerText = tTable[bedtime].toString();
 
-    drawChart(tTable);
+
+
+    // drawChart();
 }
 // load frozen version 44
 google.charts.load('44', {
-    callback: function (){drawChart(tTable)},
+    callback: drawChart(),
     packages: ['corechart']
 });
 
 
-function drawChart(tTable){
+function drawChart(){
     // create DataTable
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Time');
@@ -96,6 +98,7 @@ function drawChart(tTable){
             title:'Time'
         },
         vAxis:{
+            orientAngle: 30,
             title: "Caffeine left in body",
             // scaleType: tTable
         },
@@ -104,7 +107,7 @@ function drawChart(tTable){
 
     var chart = new  google.visualization.LineChart(document.getElementById('chart_div'));
     chart.draw(data, options);
-    tTable=[];
+    // tTable=[];
     dTable=[];
 }
 
