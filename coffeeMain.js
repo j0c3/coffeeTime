@@ -65,9 +65,6 @@ function fillChart(hours, dose, bedtime) {
         hours.setHours(hours.getHours() + 1);
     }
     document.getElementById("bedtime").innerText = tTable[bedtime].toString();
-
-
-
     drawChart();
 }
 // load frozen version 44
@@ -92,15 +89,18 @@ function drawChart(){
     }
 
     var options = {
+        colors: ['#e0440e'],
 
         hAxis: {
-            title:'Time'
+            title: 'Time',
+            slantedText: "true",
+            textPosition: "out",
         },
         vAxis:{
-            orientAngle: 30,
-            title: "Caffeine left in body",
+            title: "Caffeine mg",
             // scaleType: tTable
         },
+        title: "Caffeine left in body",
         pointsVisible: true
     };
 
